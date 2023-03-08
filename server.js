@@ -1,8 +1,9 @@
 const express = require('express');
 const path = require('path');
+const uuid = require('./helpers/uuid');
 
+const fs = require('fs');
 const PORT = 3001;
-
 const app = express();
 
 //HTML GET routes
@@ -16,7 +17,26 @@ app.get('/api/notes', (req, res) => res.sendFile(path.join(__dirname, '/db/db.js
 app.post('/api/notes', (req, res) => {
     console.info(`${req.method} request received`);
 
+    const { title, text } = req.body;
 
+    if (title && text) {
+
+      const newNote = {
+        title,
+        text,
+        id: uuid(),
+      };
+  
+      const response = {
+        status: 'success',
+        body: newNote,
+      };
+  
+      console.log(response);
+      res.status(201).json(response);
+    } else {
+      res.status(500).json('Error posting note');
+    }
   });
 
 app.listen(PORT, () =>
