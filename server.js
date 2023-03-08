@@ -14,13 +14,10 @@ app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, '/public/notes
 app.get('/api/notes', (req, res) => res.sendFile(path.join(__dirname, '/db/db.json/')));
 
 app.post('/api/notes', (req, res) => {
+    console.info(`${req.method} request received`);
 
 
-}
-);
-
-
-
+  });
 
 app.listen(PORT, () =>
   console.log(`listening at http://localhost:${PORT}`)
