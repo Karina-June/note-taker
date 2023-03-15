@@ -2,6 +2,7 @@
 In this application you will be able to post and delete notes you have created. You will be using an Express.js back end and will save and retrieve note data from a JSON file.
 
 [View Deployed](https://murmuring-fjord-94889.herokuapp.com/)
+
 ## Table of Contents
 
 1. [Technology Used](#technology-used)
@@ -20,7 +21,7 @@ To install Express
 node i 
 ```
 
-## Preview
+## Previews
 Homepage
 ![Homepage](public/assets/img/Note-Taker-Homepage.png)
 
@@ -29,4 +30,5 @@ Note Page
 
 ## Questions 
 GitHub: [Karina-June](https://github.com/Karina-June)
+
 Email: karinamorrison1@gmail.com
